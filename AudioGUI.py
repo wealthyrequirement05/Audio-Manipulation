@@ -8,6 +8,7 @@ from music21 import converter, instrument, note, chord, stream
 def convert_audio_to_sheet_music(filename):
     s1 = Song(filename)
     song_notes = s1.get_notes()
+    print(song_notes)  # Add this line
     midi_stream = stream.Stream(song_notes)
     return midi_stream
 
